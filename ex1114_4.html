@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>독서객체</title>
+    <script>
+        function book(tittle,author,publisher,price){
+            this.tittle=tittle;
+            this.author=author;
+            this.publisher=publisher;
+            this.price=price;
+
+            this.lentNum=function(name){
+                document.write(name+"님이" +this.tittle+"을 대여했습니다.")
+            }
+        }
+    </script>
+</head>
+<body>
+    <script>
+    let book1=new book("홍길동전","허균","비전사",5000);
+    document.write(book1.tittle)
+        (book1.lentNum("홍길동"));
+</script>
+</body>
+</html>
